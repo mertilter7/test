@@ -11,11 +11,10 @@ const getUsers = async (request, response) => {
    console.log(error)
  }
 };
-
 // get one users
 const getUserById = async (request, response) => {
   // object destructing
-      try {
+    try {
       let { id } = request.params;
       let userId = await prisma.user.findFirst({
     where: { id: parseInt(id) },
@@ -41,7 +40,6 @@ const createUser = async (req,res, next) => {
     console.log(error) 
   }
 }
-
 const updateUser = async (req,res) =>{
   try {
     let { id } = req.params
@@ -59,7 +57,6 @@ const updateUser = async (req,res) =>{
     console.log(error)
   }
 }
-
 const deleteUser = async (req, res) => {
   try {
     let { id } = req.params;
@@ -79,7 +76,6 @@ const deleteUser = async (req, res) => {
     console.log(error)
   }
 }
-
 module.exports = {
   getUsers,
   getUserById,

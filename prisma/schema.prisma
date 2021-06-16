@@ -22,3 +22,9 @@ model News {
   description String
   
 }
+
+model Photos {
+  id Int @default(autoincrement()) @id
+  
+}
+
